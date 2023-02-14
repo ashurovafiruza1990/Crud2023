@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="site-form has-text-centered has-background-light" method="post">
+   
+    {%csrf_token%}
+    <h1 class="title is-size-2 has-text-centered"> Siz haqiqatdan shu komentariyani o'chirishni xoxlaysizmi?</h1>
+    <div class="has-text-centered">
+    <button type="submit" class="button is-pripary">Ha</button>
+    <br>
+    <button type="submit" class="button is-pripary"><a href="{%  url 'article_detail' comment.article.slug %}" class="is-vcentered is-info">Yo'q</a></button>
+</div>
+</form>
+
+{% endblock %}

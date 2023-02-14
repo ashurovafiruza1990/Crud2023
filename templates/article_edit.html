@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form class="site-form has-text-centerad has-backgroun-light" method="post" enctype="multipart/form-data">
+    <h1 class="title is-size-2 has-text-centerad has-text-white"> Update Article </h1>
+    {% csrf_token %}
+    {{form}}
+    <div class="has-text-centered my-4">
+        <button type="submit" class="button is-success">Submit</button>
+        <a href="{% url 'article_edit' article.slug %}" class="button is-danger">Back</a>
+    </div>
+
+</form>
+{% endblock %}
